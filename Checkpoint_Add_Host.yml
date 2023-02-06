@@ -1,0 +1,11 @@
+---
+- name: Checkpoint Add Host
+  hosts: all
+  connection: httpapi
+  tasks:
+    - name: Adding Host
+          cp_mgmt_host:
+            color: red
+            ipv4_address: 192.168.1.1
+            name: My test host
+            state: present
